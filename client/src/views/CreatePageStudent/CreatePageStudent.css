@@ -1,0 +1,22 @@
+
+.CreatePageStudent {
+    padding: 50px;
+}
+.CreatePageStudent .page-top{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.CreatePageStudent .page-top h1{
+  
+}
+.CreatePageStudent .page-top a{
+  
+}
+.CreatePageStudent h4{
+  color: gray;
+}
+.CreatePageStudent .page-content{
+    border: 1px solid;
+    margin-top: 20px;
+}

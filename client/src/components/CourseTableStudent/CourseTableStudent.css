@@ -1,0 +1,33 @@
+.CourseTableStudent{
+   
+}
+.CourseTableStudent table{
+   margin-top: 30px;
+   border-bottom: 1px solid;
+}
+.CourseTableStudent table thead tr th{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.CourseTableStudent table tbody tr td{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.CourseTableStudent table tbody tr td:nth-child(1),
+.CourseTableStudent table tbody tr td:nth-child(2),
+.CourseTableStudent table tbody tr td:nth-child(3){
+   border-top: 0px solid;
+}
+.CourseTableStudent tr > td.actions{
+   vertical-align: middle;
+}
+
+.CourseTableStudent  button.blue-btn{
+   background-color: rgb(34, 34, 239);
+   color: white;
+}
+.CourseTableStudent  button.red-btn{
+   background-color: rgb(182, 182, 70);
+   color: white;
+}
+

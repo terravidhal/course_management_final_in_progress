@@ -1,0 +1,31 @@
+.CourseTableInstructor{
+   
+}
+.CourseTableInstructor table{
+   margin-top: 30px;
+   border-bottom: 1px solid;
+}
+.CourseTableInstructor table thead tr th{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.CourseTableInstructor table tbody tr td{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.CourseTableInstructor table tbody tr td:nth-child(1),
+.CourseTableInstructor table tbody tr td:nth-child(2),
+.CourseTableInstructor table tbody tr td:nth-child(3){
+   border-top: 0px solid;
+}
+.CourseTableInstructor tr > td.actions{
+   vertical-align: middle;
+}
+.CourseTableInstructor  button.blue-btn{
+   background-color: rgb(34, 34, 239);
+   color: white;
+}
+.CourseTableInstructor  button.red-btn{
+   background-color: rgb(182, 182, 70);
+   color: white;
+}

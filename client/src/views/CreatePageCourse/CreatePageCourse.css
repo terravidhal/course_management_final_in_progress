@@ -1,0 +1,21 @@
+.CreatePageCourse {
+    padding: 50px;
+}
+.CreatePageCourse .page-top{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.CreatePageCourse .page-top h1{
+  
+}
+.CreatePageCourse .page-top a{
+  
+}
+.CreatePageCourse h4{
+  color: gray;
+}
+.CreatePageCourse .page-content{
+    border: 1px solid;
+    margin-top: 20px;
+}

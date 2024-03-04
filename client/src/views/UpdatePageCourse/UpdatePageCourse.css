@@ -1,0 +1,21 @@
+.UpdatePageCourse {
+    padding: 50px;
+}
+.UpdatePageCourse .page-top{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.UpdatePageCourse .page-top h1{
+  
+}
+.UpdatePageCourse .page-top a{
+  
+}
+.UpdatePageCourse h4{
+  color: gray;
+}
+.UpdatePageCourse .page-content{
+    border: 1px solid;
+    margin-top: 20px;
+}

@@ -1,0 +1,26 @@
+.DetailsPageCourse {
+    margin: 50px auto;
+    width: 70%;
+}
+.DetailsPageCourse .page-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DetailsPageCourse .page-top h1{
+  
+}
+.DetailsPageCourse .page-top a{
+  
+}
+.DetailsPageCourse h4{
+  color: gray;
+}
+.DetailsPageCourse .page-content{
+    border: 1px solid;
+    margin-top: 20px;
+    padding: 20px;
+}
+.DetailsPageCourse span.infos{
+    font-weight: bold;
+ }

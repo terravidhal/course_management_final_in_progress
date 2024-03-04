@@ -309,9 +309,9 @@
   position: relative;
   width: 100%;
   padding: 20px;
-   display: grid;
+   /* display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 30px; 
+  grid-gap: 30px;  */
 }
 
 .AdminDashboard  .details .recentOrders {
@@ -342,6 +342,7 @@
   border-radius: 6px;
 }
 
+/*
 .AdminDashboard  .details table {
   width: 100%;
   border-collapse: collapse;
@@ -373,7 +374,7 @@
 }
 .AdminDashboard  .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
-}
+} */
 .AdminDashboard  .status.delivered {
   padding: 2px 4px;
   background: #8de02c;
@@ -431,6 +432,7 @@
   height: 100%;
   object-fit: cover;
 }
+/*
 .AdminDashboard  .recentCustomers table tr td {
   padding: 12px 10px;
 }
@@ -450,7 +452,7 @@
 }
 .AdminDashboard  .recentCustomers table tr:hover td h4 span {
   color: var(--white);
-}  
+}  */
 
 /* ====================== Responsive Design ========================== */
 

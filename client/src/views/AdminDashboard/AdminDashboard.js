@@ -48,26 +48,26 @@ const AdminDashboard = () => {
   // 
 
      // add hovered className to selected list item
-     let list = document.querySelectorAll(".AdminDashboard .navigation li");
+   /*  let list = document.querySelectorAll(".AdminDashboard .navigation li");
      
      function activeLink() {
        list.forEach((item) => {
          item.classList.remove("hovered");
        });
        this.classList.add("hovered");
-     }
+     } */
      
     // list.forEach((item) => item.addEventListener("mouseover", activeLink));
      
      // Menu Toggle
-     let toggle = document.querySelector(".AdminDashboard .toggle") || {};
+   /*  let toggle = document.querySelector(".AdminDashboard .toggle") || {};
      let navigation = document.querySelector(".AdminDashboard .navigation");
      let main = document.querySelector(".AdminDashboard .main");
      
      toggle.onclick = function () {
        navigation.classList.toggle("active");
        main.classList.toggle("active");
-     };
+     }; */
 
 
   // get all courses
@@ -257,7 +257,7 @@ const AdminDashboard = () => {
   return (
     <div className="AdminDashboard">
         <div className="container">
-        <div className="navigation">
+        <div className="navigation active">
             <ul>
                 <li>
                     <a href="#">
@@ -277,32 +277,39 @@ const AdminDashboard = () => {
                 </li>
             </ul>
         </div>
-        <div className="main">
+        <div className="main active">
             <div class="topbar">
-                <div class="toggle">
+                <div class="toggle active">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-
                 <div class="search welcome">
                     <label>
                         {/* <input type="text" placeholder="Search here"/>
                         <ion-icon name="search-outline"></ion-icon> */}
-                        welcome {userObjs.name} !
+                        {/* welcome {userObjs.name} ! */}
+                        Admin Dashboard
                     </label>
                 </div>
-
                 <div class="user">
                     <img src="assets/images/utilisateur.png" alt=""/>
+                </div>
+            </div>
+            <div class="topbar">
+                <div class="welcomeUser">
+                   &nbsp;&nbsp;&nbsp;welcome {userObjs.name} !
+                </div>
+                <div class="logout">
+                    Logout
                 </div>
             </div>
             <div className="details">
                 <div className="recentOrders">
                     <div className="cardHeader">
                         <h2>All Courses</h2>
-                        {/* <a href="#" className="btn">Add New Course</a> */}
+                        <a href="#" class="btn">Add New Courses</a>
                     </div>
-
-                    <table>
+                    <CourseTable allCourses={allCourses} deleteCourse={deleteCourse} />
+                    {/* <table>
                         <thead>
                             <tr>
                                 <td>Name</td>
@@ -319,101 +326,36 @@ const AdminDashboard = () => {
                                 <td>Paid</td>
                                 <td><span className="status delivered">Delivered</span></td>
                             </tr>
-
-                            <tr>
-                                <td>Dell Laptop</td>
-                                <td>$110</td>
-                                <td>Due</td>
-                                <td><span className="status pending">Pending</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Apple Watch</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span className="status return">Return</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Addidas Shoes</td>
-                                <td>$620</td>
-                                <td>Due</td>
-                                <td><span className="status inProgress">In Progress</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Star Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span className="status delivered">Delivered</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Dell Laptop</td>
-                                <td>$110</td>
-                                <td>Due</td>
-                                <td><span className="status pending">Pending</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Apple Watch</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span className="status return">Return</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Addidas Shoes</td>
-                                <td>$620</td>
-                                <td>Due</td>
-                                <td><span className="status inProgress">In Progress</span></td>
-                            </tr>
                         </tbody>
-                    </table>
+                    </table> */}
                 </div>
-                <div class="recentCustomers">
+                {/* <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Create Customers</h2>
                     </div>
                     <table>
                         <tr>
-                            {/* <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""/></div>
-                            </td> */}
                             <td>
-                                {/* <h4>David <br/> <span>Italy</span></h4> */}
                                 <h4>Create New Course <br/></h4>
                             </td>
                         </tr>
                         <tr>
-                            {/* <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""/></div>
-                            </td> */}
                             <td>
-                                {/* <h4>David <br/> <span>Italy</span></h4> */}
                                 <h4>Create New Instructor <br/></h4>
                             </td>
                         </tr>
                         <tr>
-                            {/* <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""/></div>
-                            </td> */}
                             <td>
-                                {/* <h4>David <br/> <span>Italy</span></h4> */}
                                 <h4>Create New Student <br/></h4>
                             </td>
                         </tr>
                         <tr>
-                            {/* <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""/></div>
-                            </td> */}
                             <td>
-                                {/* <h4>David <br/> <span>Italy</span></h4> */}
                                 <h4>Logout<br/></h4>
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div> */}
             </div>
         </div>
         </div> 

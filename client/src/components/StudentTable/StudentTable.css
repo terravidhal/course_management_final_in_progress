@@ -1,1 +1,75 @@
 .StudentTable {}
+.StudentTable table{
+   margin-top: 30px;
+   border-bottom: 1px solid;
+}
+.StudentTable table{
+  width: 100%;
+}
+.StudentTable .middle{
+    display: flex;
+  justify-content: space-around;
+}
+.StudentTable table thead tr th{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.StudentTable table tbody tr td{
+   border: 1px solid;
+   border-bottom: 0px solid;
+}
+.StudentTable table tbody tr td:nth-child(1),
+.StudentTable table tbody tr td:nth-child(2),
+.StudentTable table tbody tr td:nth-child(3){
+   border-top: 0px solid;
+}
+.StudentTable tr > td.actions{
+   vertical-align: middle;
+}
+
+.StudentTable button.blue-btn{
+    background-color: #337180;
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    border: none;
+ }
+ .StudentTable button.red-btn{
+    background-color: rgb(182, 182, 70);
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    border: none;
+ }
+ 
+ .StudentTable .btt{
+    font-weight: bold;
+ }
+ .StudentTable .btt.violet{
+    color: rgb(130, 9, 217);
+ }
+ .StudentTable .btt.brown{
+    color: brown;
+ }
+ .StudentTable .btt.blue{
+    color: rgb(0, 110, 255);
+ }
+ .StudentTable .btt.orange{
+    color: orange;
+ }
+ .StudentTable .btt.vert{
+    background-color: transparent;
+    position: relative;
+    text-decoration: none;
+    color: green;
+    border-radius: 6px;
+    border: none;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+ }
+ 

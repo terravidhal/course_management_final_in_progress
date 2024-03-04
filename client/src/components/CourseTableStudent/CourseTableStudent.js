@@ -82,7 +82,7 @@ const CourseTableStudent = (props) => {
                         > {elt.status}</button>
                     </td>
                       <td className="actions">
-                            <Link className=""  to={"/courses/" + elt._id}>
+                            <Link className="btt violet"  to={"/courses/" + elt._id}>
                               details
                             </Link> |&nbsp;
                       </td>

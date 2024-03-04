@@ -238,6 +238,24 @@ const AdminDashboard = () => {
                     </div>
                     <CourseTable allCourses={allCourses} deleteCourse={deleteCourse} />
                 </div>
+                <div className="recentOrders2">
+                    <div className="cardHeader">
+                        <h2>All Students</h2>
+                        <Link class="btn" to="/students/new">
+                           Add New Student
+                       </Link>
+                    </div>
+                    <StudentTable allStudents={allStudents} deleteStudent={deleteStudent} />
+                </div>
+                <div className="recentOrders2">
+                    <div className="cardHeader">
+                        <h2>All Instructors</h2>
+                        <Link class="btn" to="/instructors/new">
+                           Add New instructor
+                       </Link>
+                    </div>
+                    <InstructorTable allInstructors={allInstructors} deleteInstructor={deleteInstructor} />
+                </div>
             </div>
         </div>
         </div> 

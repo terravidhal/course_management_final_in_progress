@@ -9,9 +9,6 @@ import InstructorTable from '../../components/InstructorTable/InstructorTable';
 
 
 
-
-
-
 const AdminDashboard = () => {
   const [allCourses, setAllCourses] = useState([]);
   const [allStudents, setAllStudents] = useState([]);
@@ -193,20 +190,18 @@ const AdminDashboard = () => {
         <div className="container">
         <div className="navigation">
             <ul>
-                <li>
-                    <a href="#">
+                <li className=''>
+                    <a  href="#">
                         <span className="icon colorIcon">
-                            <ion-icon name="book-outline"></ion-icon>
+                            <ion-icon name="logo-pwa"></ion-icon>
                         </span>
-                        {/* <span className="title smallTitle">Courses Manager</span> */}
                     </a>
                 </li>
-                <li>
+                <li className='select'>
                     <a href="#">
                         <span className="icon">
-                            <ion-icon name="reader-outline"></ion-icon>
+                            <ion-icon name="logo-buffer"></ion-icon>
                         </span>
-                        {/* <span className="title">Admin Dashboard</span> */}
                     </a>
                 </li>
             </ul>
@@ -218,9 +213,6 @@ const AdminDashboard = () => {
                 </div>
                 <div class="search welcome">
                     <label>
-                        {/* <input type="text" placeholder="Search here"/>
-                        <ion-icon name="search-outline"></ion-icon> */}
-                        {/* welcome {userObjs.name} ! */}
                         Admin Dashboard
                     </label>
                 </div>
@@ -230,10 +222,10 @@ const AdminDashboard = () => {
             </div>
             <div class="topbar">
                 <div class="welcomeUser">
-                   &nbsp;&nbsp;&nbsp;welcome {userObjs.name} !
+                   &nbsp;&nbsp;&nbsp;welcome <span>{userObjs.name}</span> !
                 </div>
                 <div class="logout">
-                    <button class="btn"  onClick={logout}>logout</button>
+                    <button class="btnn logout"  onClick={logout}>logout</button>
                 </div>
             </div>
             <div className="details">

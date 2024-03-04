@@ -16,18 +16,51 @@
   --blue-green: #337180;
   --blue-gray-dark: #212b38;
   --orange: #f2b14a;
+  --red: red;
   --white: #fff;
   --gray: #f5f5f5;
   --black1: #222;
   --black2: #999;
 }
 
-.AdminDashboard  {
-  min-height: 100vh;
-  overflow-x: hidden;
+.AdminDashboard  .none {
+  display: none;
+}
+.AdminDashboard  .welcomeUser span{
+  font-weight: bold;
+  color: #1795ce;
+}
+.AdminDashboard  .smallTitle {
+  font-weight: bold;
+  color: var(--orange);
+  font-size: 1.2rem;
+}
+.AdminDashboard  .jcc {
+  justify-content: center !important;
+}
+.AdminDashboard  .welcome {
+  font-weight: bold;
+  color: var(--blue-gray);
+  font-size: 2.2rem;
+}
+.AdminDashboard  .colorIcon {
+  color: var(--orange);
+}
+.AdminDashboard  .btnn {
+  position: relative;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.AdminDashboard  .btnn.logout {
+  background: var(--red);
 }
 
-/*Table style*/
+
+/* =============== TAble ================ */
 table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -68,6 +101,11 @@ table tbody tr.active-row {
 }
 
 
+.AdminDashboard  {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 .AdminDashboard .container {
   position: relative;
   width: 100%;
@@ -83,22 +121,7 @@ table tbody tr.active-row {
   overflow: hidden;
   width: 80px;
 }
-.AdminDashboard  .smallTitle {
-  font-weight: bold;
-  color: var(--orange);
-  font-size: 1.2rem;
-}
-.AdminDashboard  .jcc {
-  justify-content: center !important;
-}
-.AdminDashboard  .welcome {
-  font-weight: bold;
-  color: var(--blue-gray);
-  font-size: 2.2rem;
-}
-.AdminDashboard  .colorIcon {
-  color: var(--orange);
-}
+
 
 .AdminDashboard  .navigation ul {
   position: absolute;
@@ -116,8 +139,8 @@ table tbody tr.active-row {
 }
 
 
-.AdminDashboard  .navigation ul li:hover,
-.AdminDashboard  .navigation ul li.hovered {
+.AdminDashboard  .navigation ul li.select,
+.AdminDashboard  .navigation ul li.select.hovered {
   background-color: var(--white);
 } 
 
@@ -135,8 +158,10 @@ table tbody tr.active-row {
   color: var(--white);
 }
 
-.AdminDashboard  .navigation ul li:hover a,
-.AdminDashboard  .navigation ul li.hovered a {
+
+
+.AdminDashboard  .navigation ul li.select a,
+.AdminDashboard  .navigation ul li.select.hovered a {
   color: var(--blue-gray);
 } 
 
@@ -164,8 +189,9 @@ table tbody tr.active-row {
 
 /* --------- curve outside ---------- */
 
-.AdminDashboard  .navigation ul li:hover a::before,
-.AdminDashboard  .navigation ul li.hovered a::before {
+
+.AdminDashboard  .navigation ul li.select a::before,
+.AdminDashboard  .navigation ul li.select.hovered a::before {
   content: "";
   position: absolute;
   right: 0;
@@ -178,8 +204,9 @@ table tbody tr.active-row {
   pointer-events: none;
 }  
 
-.AdminDashboard  .navigation ul li:hover a::after,
-.AdminDashboard  .navigation ul li.hovered a::after {
+
+.AdminDashboard  .navigation ul li.select a::after,
+.AdminDashboard  .navigation ul li.select.hovered a::after {
   content: "";
   position: absolute;
   right: 0;
@@ -274,9 +301,6 @@ table tbody tr.active-row {
   position: relative;
   width: 100%;
   padding: 20px;
-   /* display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;  */
 }
 
 .AdminDashboard  .details .recentOrders {
@@ -306,6 +330,7 @@ table tbody tr.active-row {
   color: var(--white);
   border-radius: 6px;
 }
+
 
 
 .AdminDashboard  .status.delivered {

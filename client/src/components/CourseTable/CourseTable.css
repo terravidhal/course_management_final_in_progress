@@ -23,11 +23,50 @@
    vertical-align: middle;
 } 
 .CourseTable button.blue-btn{
-   background-color: rgb(34, 34, 239);
+   background-color: #337180;
+   position: relative;
+   padding: 5px 10px;
+   text-decoration: none;
    color: white;
+   border-radius: 6px;
+   border: none;
 }
 .CourseTable button.red-btn{
    background-color: rgb(182, 182, 70);
+   position: relative;
+   padding: 5px 10px;
+   text-decoration: none;
    color: white;
+   border-radius: 6px;
+   border: none;
 }
+
+.CourseTable .btt{
+   font-weight: bold;
+}
+.CourseTable .btt.violet{
+   color: rgb(130, 9, 217);
+}
+.CourseTable .btt.brown{
+   color: brown;
+}
+.CourseTable .btt.blue{
+   color: rgb(0, 110, 255);
+}
+.CourseTable .btt.orange{
+   color: orange;
+}
+.CourseTable .btt.vert{
+   background-color: transparent;
+   position: relative;
+   text-decoration: none;
+   color: green;
+   border-radius: 6px;
+   border: none;
+   text-decoration: underline;
+   font-size: 0.9rem;
+   cursor: pointer;
+}
+
+
 

@@ -3,7 +3,6 @@ import './AdminDashboard.css';
 import CourseTable from '../../components/CourseTable/CourseTable';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-//import Cookies from "universal-cookie";
 import StudentTable from '../../components/StudentTable/StudentTable';
 import InstructorTable from '../../components/InstructorTable/InstructorTable';
 
@@ -19,67 +18,13 @@ const AdminDashboard = () => {
   const [allInstructors, setAllInstructors] = useState([]);
   const navigate = useNavigate();
 
- /* const cookies = new Cookies();
-
-  const userObjs = cookies.get("USER_OBJ") || {};
-  const userObjsRole = userObjs.role || 'default';
-  const userObjsId = userObjs._id || 'default'; */
-  
-/*  const userObjs = cookies.get("USER_OBJ") ;
-  const userObjsRole = userObjs.role ;
-  const userObjsId = userObjs._id ; */
-
-  
+ 
   const userObjs = JSON.parse(localStorage.getItem('USER_OBJ')) || {};
   const userObjsRole = userObjs.role || 'default';
   const userObjsId = userObjs._id || 'default';
   
   console.log("userObjRole+++++++++", userObjsRole);
   console.log("userObjsId+++++++++", userObjsId);
-
-/**
- * IMPORTANT : MAINTENANT QUE NOUS UTILISONS DES COOKIES 
- * POUR L'AUTHENTIFICATION ET L'AUTORISATION, NOUS ASSURERONS 
- * QUE CHAQUE DEMANDE EST ENVOYÉE AVEC { withCredentials: true }. 
- * CELA ENVOYERA LES COOKIES À CHAQUE DEMANDE AFIN QUE NOTRE 
- * MIDDLEWARE VÉRIFIE QUI EST CONNECTÉ. 
-  */  
- 
-  // 
-
-     // add hovered className to selected list item
-   /*  let list = document.querySelectorAll(".AdminDashboard .navigation li");
-     
-     function activeLink() {
-       list.forEach((item) => {
-         item.classList.remove("hovered");
-       });
-       this.classList.add("hovered");
-     } */
-     
-    // list.forEach((item) => item.addEventListener("mouseover", activeLink));
-     
-     // Menu Toggle
-   /*  let toggle = document.querySelector(".AdminDashboard .toggle") || {};
-     let navigation = document.querySelector(".AdminDashboard .navigation");
-     let main = document.querySelector(".AdminDashboard .main");
-     
-     toggle.onclick = function () {
-       navigation.classList.toggle("active");
-       main.classList.toggle("active");
-     }; */
-
-
-  // get all courses
-/*  useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/courses",{withCredentials: true})
-      .then((res) => {
-        setAllCourses(res.data.allDaCourses);
-        console.log('r+++++++', res.data.allDaCourses)
-      })
-      .catch((err) => console.log(err));
-  }, []); */
 
 
   // check and update courses status
@@ -146,14 +91,11 @@ const AdminDashboard = () => {
       } else {
          console.log('pending');
       }
-       
       return course;
     });
   };
 
   
-
-
 
   // get all students
   useEffect(() => {
@@ -179,17 +121,13 @@ const AdminDashboard = () => {
 
 
 
-
-
-
-
   // delete One specific course
   const deleteCourse = (courseId) => {
     axios
       .delete("http://localhost:8000/api/courses/" + courseId,{withCredentials: true})
       .then((res) => {
         console.log(res.data.result);
-        setAllCourses(allCourses.filter(course=> course._id !== courseId)); // pas necessaire
+        setAllCourses(allCourses.filter(course=> course._id !== courseId)); 
       })
       .catch((err) => console.log(err));
   };
@@ -200,7 +138,7 @@ const AdminDashboard = () => {
       .delete("http://localhost:8000/api/students/" + studentId,{withCredentials: true})
       .then((res) => {
         console.log(res.data.result);
-        setAllStudents(allStudents.filter(student=> student._id !== studentId)); // 
+        setAllStudents(allStudents.filter(student=> student._id !== studentId)); 
       })
       .catch((err) => console.log(err));
   };
@@ -211,7 +149,7 @@ const AdminDashboard = () => {
       .delete("http://localhost:8000/api/instructors/" + instructorId,{withCredentials: true})
       .then((res) => {
         console.log(res.data.result);
-        setAllInstructors(allInstructors.filter(instructor=> instructor._id !== instructorId)); // 
+        setAllInstructors(allInstructors.filter(instructor=> instructor._id !== instructorId)); 
       })
       .catch((err) => console.log(err));
   };
@@ -224,20 +162,17 @@ const AdminDashboard = () => {
       if ( userObjsRole === 'student') {
           
         console.log("deconnexion",res.data.message);
-      //  cookies.remove("USER_OBJ");
         localStorage.removeItem('USER_OBJ');
          navigate("/login_page");
          
       }else if (userObjsRole === 'instructor') {
           
           console.log("deconnexion",res.data.message);
-         // cookies.remove("USER_OBJ");
           localStorage.removeItem('USER_OBJ');
            navigate("/login_page");
       }else if (userObjsRole === 'admin') {
           
           console.log("deconnexion",res.data.message);
-        //  cookies.remove("USER_OBJ");
           localStorage.removeItem('USER_OBJ');
            navigate("/route/log/loaded25");
 
@@ -247,7 +182,6 @@ const AdminDashboard = () => {
       }   
     })
     .catch((err)=>{
-     // console.log("+++++++++++",err.response);
       console.log("Erreur de déconnexion +++++++++++",err);
     })
 };
@@ -257,14 +191,14 @@ const AdminDashboard = () => {
   return (
     <div className="AdminDashboard">
         <div className="container">
-        <div className="navigation active">
+        <div className="navigation">
             <ul>
                 <li>
                     <a href="#">
                         <span className="icon colorIcon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>
-                        <span className="title smallTitle">Courses Manager</span>
+                        {/* <span className="title smallTitle">Courses Manager</span> */}
                     </a>
                 </li>
                 <li>
@@ -272,14 +206,14 @@ const AdminDashboard = () => {
                         <span className="icon">
                             <ion-icon name="reader-outline"></ion-icon>
                         </span>
-                        <span className="title">Admin Dashboard</span>
+                        {/* <span className="title">Admin Dashboard</span> */}
                     </a>
                 </li>
             </ul>
         </div>
-        <div className="main active">
+        <div className="main">
             <div class="topbar">
-                <div class="toggle active">
+                <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="search welcome">
@@ -299,63 +233,19 @@ const AdminDashboard = () => {
                    &nbsp;&nbsp;&nbsp;welcome {userObjs.name} !
                 </div>
                 <div class="logout">
-                    Logout
+                    <button class="btn"  onClick={logout}>logout</button>
                 </div>
             </div>
             <div className="details">
                 <div className="recentOrders">
                     <div className="cardHeader">
                         <h2>All Courses</h2>
-                        <a href="#" class="btn">Add New Courses</a>
+                        <Link class="btn" to="/courses/new">
+                           Add New Courses
+                       </Link>
                     </div>
                     <CourseTable allCourses={allCourses} deleteCourse={deleteCourse} />
-                    {/* <table>
-                        <thead>
-                            <tr>
-                                <td>Name</td>
-                                <td>Price</td>
-                                <td>Payment</td>
-                                <td>Status</td>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>Star Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span className="status delivered">Delivered</span></td>
-                            </tr>
-                        </tbody>
-                    </table> */}
                 </div>
-                {/* <div class="recentCustomers">
-                    <div class="cardHeader">
-                        <h2>Create Customers</h2>
-                    </div>
-                    <table>
-                        <tr>
-                            <td>
-                                <h4>Create New Course <br/></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Create New Instructor <br/></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Create New Student <br/></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Logout<br/></h4>
-                            </td>
-                        </tr>
-                    </table>
-                </div> */}
             </div>
         </div>
         </div> 

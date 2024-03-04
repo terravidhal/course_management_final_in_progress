@@ -10,9 +10,9 @@ const StudentModel = require("../models/student.model");
 
 const InstructorModel = require("../models/instructor.model");
 
-//const UserModel = require("../models/user.model");
+//const UserModel = require("../models/user.model")
 
-// 3) Exporting Controller functions
+// 3) Exporting Controller function
 module.exports = {
 
   login : async (req, res) => {

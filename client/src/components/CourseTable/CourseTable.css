@@ -1,3 +1,4 @@
+
 .CourseTable{
    
 }
@@ -11,7 +12,7 @@
 }
 .CourseTable table tbody tr td{
    border: 1px solid;
-   border-bottom: 0px solid;
+   /* border-bottom: 0px solid; */
 }
 .CourseTable table tbody tr td:nth-child(1),
 .CourseTable table tbody tr td:nth-child(2),
@@ -20,7 +21,7 @@
 }
 .CourseTable tr > td.actions{
    vertical-align: middle;
-}
+} 
 .CourseTable button.blue-btn{
    background-color: rgb(34, 34, 239);
    color: white;

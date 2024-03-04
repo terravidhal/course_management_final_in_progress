@@ -125,10 +125,10 @@ const CourseTable = (props) => {
                   <Link className=""  to={"/courses/edit/" + elt._id}>
                     edit
                   </Link> |&nbsp;
-                  <Button  create="" update="" 
+                  {/* <Button  create="" update="" 
                    deletes="delete" 
                    isActive={true}
-                   successCallback={() => deleteCourse(elt._id)}/>
+                   successCallback={() => deleteCourse(elt._id)}/> */}
                   <button onClick={() => deleteCourse(elt._id)}>remove</button>
                 </td>
               </tr>

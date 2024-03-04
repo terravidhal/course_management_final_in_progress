@@ -19,7 +19,7 @@ const Button = (props) => {
           className="btn btn-danger Button"
           onClick={()=>successCallback()}
         >
-          <i class="fa-solid fa-house"></i> &nbsp;Remove
+          <i class="fa-solid fa-trash"></i> &nbsp;Remove
            </button> 
            : null
         }
